@@ -1,3 +1,5 @@
+"use client"
+
 import {
     SignInButton,
     SignedIn,
@@ -9,6 +11,7 @@ import {
   import logo from '../assets/logo.png';
   import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
   
   const Header = () => {
      
@@ -42,7 +45,7 @@ import Link from 'next/link';
 
     ];
 
-
+const router = useRouter();
   
 
 
@@ -56,11 +59,12 @@ import Link from 'next/link';
             width={120}
             height={120}
             className="absolute -top-6"
+            onClick={() => router.push("/")}
           />
         </div>
 
         <nav>
-        <div className='flex items-center ml-12 gap-12 text-md uppercase text-slate-800'>
+        <div className='flex items-center ml-12 gap-8 text-md uppercase text-slate-800'>
             {routes.map((route) => (
                 <div key={route.id}>
                    <Link href = {route.href}>{route.title}</Link>

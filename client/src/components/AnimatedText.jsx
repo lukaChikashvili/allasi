@@ -18,11 +18,11 @@ export const AnimatedText = ({ text, className, delay = 0 }) => {
 
   const child = {
     hidden: {
-      clipPath: "inset(60% 50% 0 0)",
+      clipPath: "inset(100% 0% 0% 0%)", 
       opacity: 0,
     },
     visible: {
-      clipPath: "inset(0% 0 0 0)",
+      clipPath: "inset(0% 0% 0% 0%)",
       opacity: 1,
       transition: {
         duration: DURATION,
